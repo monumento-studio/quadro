@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Account</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Iconos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-24.000000, 0.000000)" stroke="#000000">
+            <path d="M31.5104167,8.8125 C29.3530544,8.8125 27.6041667,7.0636123 27.6041667,4.90625 C27.6041667,2.7488877 29.3530544,1 31.5104167,1 C33.667779,1 35.4166667,2.7488877 35.4166667,4.90625 C35.4166667,7.0636123 33.667779,8.8125 31.5104167,8.8125 Z M25,17.4930556 C25,13.6577448 28.1091337,10.5486111 31.9444444,10.5486111 C35.7797552,10.5486111 38.8888889,13.6577448 38.8888889,17.4930556 L25,17.4930556 Z" id="Account"></path>
+        </g>
+    </g>
+</svg>
