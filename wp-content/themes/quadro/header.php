@@ -27,26 +27,7 @@
         <article class="container bottom justify-center">
           <button class="m-dropdown show-for-small">Compra <span class="t">&#9660;</span></button>
           <div class="links">
-            <a href="categoria.html">Recámara</a>
-            <a href="categoria.html">Sala</a>
-            <a href="categoria.html">Comedor</a>
-            <a href="categoria.html">Baño</a>
-            <a href="categoria.html">Iluminación</a>
-            <a href="categoria.html">Exterior</a>
-            <a href="categoria.html">Decoración</a>
-            <a href="categoria.html">Arte</a>
-            <a href="categoria.html">Tapetes</a>
-            <button class="dis">Diseñador</button>
-              <div class="dropdown">
-                <a href="categoria.html">Ralph Lauren</a>
-                <a href="categoria.html">Jorge Diego Etienne</a>
-                <a href="categoria.html">Century</a>
-                <a href="categoria.html">Ralph Lauren</a>
-                <a href="categoria.html">Jorge Diego Etienne</a>
-                <a href="categoria.html">Century</a>
-              </div>
-            <a href="oferta.html" class="oferta">Oferta</a>
-            <a href="categoria.html">Pronta Entrega</a>
+            <?php wp_nav_menu( array( 'container_class' => 'main-nav', 'theme_location' => 'primary' ) ); ?>
             <a href="historia.html" class="show-for-small historia-movil">Nuestra Historia</a>
           </div>
         </article>
