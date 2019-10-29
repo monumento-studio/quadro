@@ -2,12 +2,14 @@
 
 function ql_enqueue(){
 
-    wp_register_style( 'ql_estilos', get_template_directory_uri() . '/assets/css/style.css' );
+  wp_register_style( 'ql_estilos', get_template_directory_uri() . '/assets/css/style.css' );
+  wp_register_style( 'ql_slickcss', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 
 
 
 
-    wp_enqueue_style( 'ql_estilos' );
+  wp_enqueue_style( 'ql_slickcss' );
+  wp_enqueue_style( 'ql_estilos' );
 
 
 

@@ -13,7 +13,15 @@
       <nav id="nav">
         <article class="container top padding">
           <a href="historia.html" class="hide-for-small">Nuestra Historia</a>
-          <a href="index.html" class="logo"><h1>QUADRO<span>[<span id="tagline">Calidad y Servicio</span>]</span></h1></a>
+          <?php
+
+                      if( has_custom_logo() ){
+                        the_custom_logo();
+                      }else{
+                        ?> <a href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo( 'name' ); ?> <?php
+                      }
+
+                      ?><span>[<span id="tagline">Calidad y Servicio</span>]</span></h1></a>
           <section class="icons">
             <article class="buscador b-bottom">
               <input type="text" tabindex="1" placeholder="Busca aquí">

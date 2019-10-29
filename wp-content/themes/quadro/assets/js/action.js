@@ -245,4 +245,15 @@ $(document).ready(function(){
   });
 });
 
+//Extra
+
+$('ul#menu-menu-header li.menu-item-has-children').on('mouseenter', function(){
+  $('ul#menu-menu-header li.menu-item-has-children ul.sub-menu').css('display', 'flex');
+});
+
+$('ul#menu-menu-header li.menu-item-has-children').on('mouseleave', function(){
+  $('ul#menu-menu-header li.menu-item-has-children ul.sub-menu').css('display', 'none');
+});
+
+
 });

@@ -1,183 +1,191 @@
 <?php //Template Name: Template Home ?>
 
-<?php get_header(); ?>
+<?php get_header();
 
-    <!-- Banner Promocional -->
-    <section class="container promo">
-      <article>
-        <a href="oferta.html">
-          BACKYARD SALE
-          <span>[Hasta 70% de descuento]</span>
-        </a>
-      </article>
-    </section>
+$descuento_1 = get_field('descuento_1');
+$texto_descuento_1 = get_field('texto_descuento_1');
+$descuento_2 = get_field('descuento_2');
+$texto_descuento_2 = get_field('texto_descuento_2');
+$imagen_custom = get_field('imagen_custom');
+$texto_custom = get_field('texto_custom');
+
+
+?>
+
+
+
+
+    <?php if( $descuento_1 == 'active' ): ?>
+
+      <!-- Banner Promocional -->
+      <section class="container promo">
+        <article>
+          <?php echo $texto_descuento_1; ?>
+        </article>
+      </section>
+
+    <?php endif; ?>
+
+
 
     <!-- Slider de Colecciones -->
     <section class="container colecciones b-bottom">
-      <article class="slide mobile-column flex justify-between">
-        <div class="left w50 flex justify-center padding">
-          <div class="flex justify-center align-center flex-column">
-            <h2>RALPH LAUREN
-              <span>[Nueva Colección]</span>
-            </h2>
-            <a href="coleccion.html" class="button white">Compra Ahora</a>
-          </div>
-        </div>
 
-        <div class="right w50 flex padding">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/coleccion.jpg">
-            <img class="intrinsic-item" srcset="images/coleccion.jpg" alt="">
-          </picture>
-        </div>
-      </article>
-      <article class="slide mobile-column flex justify-between">
-        <div class="left w50 flex justify-center padding">
-          <div class="flex justify-center align-center flex-column">
-            <h2>QUADRO EXCLUSIVE
-              <span>[Sólo en línea]</span>
-            </h2>
-            <a href="coleccion.html" class="button white">Compra Ahora</a>
-          </div>
-        </div>
-        <div class="right w50 flex padding">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/quadro-col.jpg">
-            <img class="intrinsic-item" srcset="images/quadro-col.jpg" alt="">
-          </picture>
-        </div>
-      </article>
-      <article class="slide mobile-column flex justify-between">
-        <div class="left w50 flex justify-center padding">
-          <div class="flex justify-center align-center flex-column">
-            <h2>JORGE DIEGO ETIENNE
-              <span>[AW2019]</span>
-            </h2>
-            <a href="coleccion.html" class="button white">Compra Ahora</a>
-          </div>
-        </div>
-        <div class="right w50 flex padding">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/jde.jpg">
-            <img class="intrinsic-item" srcset="images/jde.jpg" alt="">
-          </picture>
-        </div>
-      </article>
-    </section>
+    <?php
+        if( have_rows('slider_colecciones') ):
+        // loop through the rows of data
+            while ( have_rows('slider_colecciones') ) : the_row();
+            //vars
+            $texto_slider = get_sub_field('texto_slider');
+            $imagen_slider = get_sub_field('imagen_slider');
+            ?>
+
+            <article class="slide mobile-column flex justify-between">
+              <div class="left w50 flex justify-center padding">
+                <div class="flex justify-center align-center flex-column">
+                  <?php echo $texto_slider; ?>
+                </div>
+              </div>
+
+              <div class="right w50 flex padding">
+                <picture class="intrinsic intrinsic--square">
+                  <source media="(min-width: 500px)" srcset="<?php echo $imagen_slider['url'] ?>">
+                  <img class="intrinsic-item" srcset="<?php echo $imagen_slider['url'] ?>" alt="<?php echo $imagen_slider['alt'] ?>">
+                </picture>
+              </div>
+            </article>
+
+
+
+        <?php
+        endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+    ?>
+
+  </section>
+
+
+
+
+
 
     <!-- Intro Categorías -->
-    <section class="container intro-categorias flex justify-between mobile-column">
-      <article class="intro-categoria w50 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--4x3">
-            <img class="intrinsic-item hover" srcset="images/comedor02.jpg" alt="">
-            <img class="intrinsic-item" srcset="images/comedor01.jpg" alt="">
-          </picture>
-          <h2>MOMENTOS DE CONVIVENCIA</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-          <span class="button">Compra Comedor</span>
-        </a>
-      </article>
+<section class="container intro-categorias flex justify-between mobile-column">
+    <?php
+        if( have_rows('modulo_de_categoria') ):
+        // loop through the rows of data
+            while ( have_rows('modulo_de_categoria') ) : the_row();
+            //vars
+            $imagen_1_categoria = get_sub_field('imagen_1_categoria');
+            $imagen_2_categoria = get_sub_field('imagen_2_categoria');
+            $texto_categoria = get_sub_field('texto_categoria');
+            $link_categoria = get_sub_field('link_categoria');
 
-      <article class="intro-categoria w50 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--4x3">
-            <img class="intrinsic-item hover" srcset="images/iluminacion02.jpg" alt="">
-            <img class="intrinsic-item" srcset="images/iluminacion01.jpg" alt="">
-          </picture>
-          <h2>Ambientación Esencial</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-          <span class="button">Compra Iluminación</span>
-        </a>
-      </article>
+            ?>
 
-      <article class="intro-categoria w50 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--4x3">
-            <img class="intrinsic-item hover" srcset="images/recamara02.jpg" alt="">
-            <img class="intrinsic-item" srcset="images/recamara01.jpg" alt="">
-          </picture>
-          <h2>Descanso y Relajación</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-          <span class="button">Compra Recámara</span>
-        </a>
-      </article>
+            <article class="intro-categoria w50 padding b-bottom">
 
-      <article class="intro-categoria w50 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--4x3">
-            <img class="intrinsic-item hover" srcset="images/exterior02.jpg" alt="">
-            <img class="intrinsic-item" srcset="images/exterior01.jpg" alt="">
-          </picture>
-          <h2>Espacios Recreativos</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
-          <span class="button">Compra Exterior</span>
-        </a>
-      </article>
+              <a href="<?php echo $link_categoria['url']; ?>">
+
+                <picture class="intrinsic intrinsic--4x3">
+                  <img class="intrinsic-item hover" srcset="<?php echo $imagen_2_categoria['url']; ?>" alt="">
+                  <img class="intrinsic-item" srcset="<?php echo $imagen_1_categoria['url']; ?>" alt="<?php echo $imagen_1_categoria['alt']; ?>">
+                </picture>
+
+                  <?php echo $texto_categoria; ?>
+                  <span class="button"><?php echo $link_categoria['title']; ?></span>
+
+              </a>
+
+            </article>
+
+
+
+        <?php
+        endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+    ?>
+
     </section>
+
+
 
     <!-- Diseñador -->
-    <section class="container disenador flex justify-between mobile-column">
-      <article class="intro-disenador w33 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/coleccion.jpg">
-            <img class="intrinsic-item" srcset="images/coleccion.jpg" alt="">
-          </picture>
-          <h3>Ralph Lauren<span>[Diseñador]</span></h3>
-        </a>
-      </article>
 
-      <article class="intro-disenador w33 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/jde2.jpg">
-            <img class="intrinsic-item" srcset="images/jde2.jpg" alt="">
-          </picture>
-          <h3>Jorge Diego Etienne<span>[Diseñador]</span></h3>
-        </a>
-      </article>
+<section class="container disenador flex justify-between mobile-column">
 
-      <article class="intro-disenador w33 padding b-bottom">
-        <a href="categoria.html">
-          <picture class="intrinsic intrinsic--square">
-            <source media="(min-width: 500px)" srcset="images/century.jpg">
-            <img class="intrinsic-item" srcset="images/century.jpg" alt="">
-          </picture>
-          <h3>Century<span>[Diseñador]</span></h3>
-        </a>
-      </article>
-    </section>
+    <?php
+        if( have_rows('disenadores') ):
+        // loop through the rows of data
+            while ( have_rows('disenadores') ) : the_row();
+            //vars
+            $imagen_disenador = get_sub_field('imagen_disenador');
+            $texto_disenador = get_sub_field('texto_disenador');
+
+            ?>
+
+            <article class="intro-disenador w33 padding b-bottom">
+              <a href="categoria.html">
+                <picture class="intrinsic intrinsic--square">
+                  <source media="(min-width: 500px)" srcset="<?php echo $imagen_disenador['url']; ?>">
+                  <img class="intrinsic-item" srcset="<?php echo $imagen_disenador['url']; ?>" alt="<?php echo $imagen_disenador['alt']; ?>">
+                </picture>
+                <?php echo $texto_disenador; ?>
+              </a>
+            </article>
+
+
+        <?php
+        endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+    ?>
+
+  </section>
+
+
+  <?php if( $descuento_2 == 'active' ): ?>
 
     <!-- Oferta -->
     <section class="container oferta-banner flex justify-between mobile-column">
-      <a href="categoria.html">
-        <h2>
-          Productos En oferta
-          <span>[Descuentos desde el 25%]</span>
-        </h2>
-      </a>
+        <?php echo $texto_descuento_2; ?>
     </section>
+
+  <?php endif; ?>
+
+
 
     <!-- Servicio al cliente -->
     <section class="container intro-sac flex justify-between mobile-column">
       <article class="w50 padding b-bottom">
         <picture class="intrinsic intrinsic--square">
-          <source media="(min-width: 500px)" srcset="images/sac.jpg">
-          <img class="intrinsic-item" srcset="images/sac.jpg" alt="">
+          <source media="(min-width: 500px)" srcset="<?php echo $imagen_custom['url']; ?>">
+          <img class="intrinsic-item" srcset="<?php echo $imagen_custom['url']; ?>" alt="<?php echo $imagen_custom['alt']; ?>">
         </picture>
       </article>
 
       <article class="w50 flex justify-center padding b-bottom">
         <div class="flex justify-center align-center flex-column padding2x">
-          <h2>¿No encuentras lo que buscas?</h2>
-          <p>Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen.</p>
-          <a href="servicioalcliente.html" class="button">Conoce más</a>
+          <?php echo $texto_custom; ?>
         </div>
       </article>
     </section>
 
-    <section class="newsletter">
+    <!-- <section class="newsletter">
       <button class="close">&times;</button>
       <article class="nl-form">
         <h3><span>[Newsletter]</span></h3>
@@ -185,7 +193,7 @@
         <input type="text" placeholder="Correo" tabindex="2">
         <button type="submit" name="button" class="button" tabindex="3">Regístrate</button>
       </article>
-    </section>
+    </section> -->
 
     <?php get_footer(); ?>
 
@@ -194,10 +202,10 @@
     jQuery(document).ready(function($) {
 
 
-      function news(){
-        $('.newsletter').addClass('show2');
-        $('.container, #nav').addClass('blur');
-      }
+      // function news(){
+      //   $('.newsletter').addClass('show2');
+      //   $('.container, #nav').addClass('blur');
+      // }
 
       function loader(){
         $('.loader h2').css({
@@ -220,7 +228,7 @@
       setTimeout(loader,1000);
       setTimeout(loaderMain,4000);
       setTimeout(loaderHide,4500);
-      setTimeout(news,10000);
+      // setTimeout(news,10000);
 
       $('.close').click(function(){
         $('.newsletter').removeClass('show2');

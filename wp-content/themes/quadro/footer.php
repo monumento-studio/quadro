@@ -1,18 +1,59 @@
 <!-- Footer -->
 <footer class="container flex justify-between mobile-column padding">
   <article class="w20">
-    <h4>QUADRO</h4>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+    <?php the_field('descripcion_footer', 'option'); ?>
   </article>
-  <ul>
+
+
+  <?php if( have_rows('links_footer_1', 'option') ): ?>
+
+      <ul>
+
+        <?php while( have_rows('links_footer_1', 'option') ): the_row();
+
+          $link1 = get_sub_field('link1');
+
+          ?>
+
+            <li><a href="<?php echo $link1['url']; ?>"><?php echo $link1['title']; ?></a></li>
+
+          <?php endwhile; ?>
+
+        </ul>
+
+      <?php endif; ?>
+
+
+
+  <!-- <ul>
     <li><a href="historia.html">Nuestra Historia</a></li>
     <li><a href="servicioalcliente.html">Servicio al cliente</a></li>
     <li><a href="envios.html">Envíos y Devoluciones</a></li>
     <li><a href="sucursales.html">Sucursales</a></li>
     <li><a href="privacidad.html">Políticas de Privacidad</a></li>
     <li><a href="bolsadetrabajo.html">Bolsa de Trabajo</a></li>
-  </ul>
-  <ul>
+  </ul> -->
+
+
+  <?php if( have_rows('links_footer_2', 'option') ): ?>
+
+      <ul>
+
+        <?php while( have_rows('links_footer_2', 'option') ): the_row();
+
+          $link2 = get_sub_field('link2');
+
+          ?>
+
+            <li><a href="<?php echo $link2['url']; ?>"><?php echo $link2['title']; ?></a></li>
+
+          <?php endwhile; ?>
+
+        </ul>
+
+      <?php endif; ?>
+
+  <!-- <ul>
     <li><a href="recamara.html">Recámara</a></li>
     <li><a href="sala.html">Sala</a></li>
     <li><a href="comedor.html">Comedor</a></li>
@@ -21,19 +62,40 @@
     <li><a href="exterior.html">Exterior</a></li>
     <li><a href="disenador.html">Diseñador</a></li>
     <li><a href="categoría.html">Oferta</a></li>
-  </ul>
-  <ul>
+  </ul> -->
+
+
+  <?php if( have_rows('links_footer_3', 'option') ): ?>
+
+    <ul>
+
+      <?php while( have_rows('links_footer_3', 'option') ): the_row();
+
+        $link3 = get_sub_field('link3');
+
+        ?>
+
+          <li><a href="<?php echo $link3['url']; ?>"><?php echo $link3['title']; ?></a></li>
+
+        <?php endwhile; ?>
+
+      </ul>
+
+    <?php endif; ?>
+
+  <!-- <ul>
     <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
     <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
     <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
     <li><a href="https://pinterest.com" target="_blank">Pinterest</a></li>
     <li><a href="https://homify.com" target="_blank">Homify</a></li>
-  </ul>
-  <p class="dir">+52 1 (55)1234 5678<br>
-    Rio Mosela 222 Col. del Valle<br>
-    C.P. 66220, SPGG<br>
-    Nuevo León, México
-  </p>
+  </ul> -->
+  <article class="form-footer">
+    <h4><span>[Newsletter]</span></h4>
+    <input type="text" placeholder="Correo" tabindex="2">
+    <button type="submit" name="button" class="button" tabindex="3">Regístrate</button>
+  </article>
+
 </footer>
 
 <?php wp_footer(); ?>
