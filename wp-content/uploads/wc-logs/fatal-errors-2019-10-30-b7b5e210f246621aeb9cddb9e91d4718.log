@@ -1,0 +1,19 @@
+2019-10-30T00:49:27+00:00 CRITICAL Uncaught Error: Call to a member function get_price_html() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/page.php:81
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include()
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#3 {main}
+  thrown in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/page.php on line 81
+
+2019-10-30T01:21:13+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_cat_ID(), 0 passed in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/page.php on line 43 and exactly 1 expected in /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/category.php:200
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/page.php(43): get_cat_ID()
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#4 {main}
+  thrown in /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/category.php on line 200
+
+2019-10-30T01:29:48+00:00 CRITICAL syntax error, unexpected '',destacado'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/page.php on line 49
+

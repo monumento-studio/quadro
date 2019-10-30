@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div class="loader flex align-center justify-center"><h2>QUADRO <span>[Calidad y Servicio]</span></h2></div>
+    <!-- <div class="loader flex align-center justify-center"><h2>QUADRO <span>[Calidad y Servicio]</span></h2></div> -->
     <!-- Navegación -->
     <header>
       <nav id="nav">

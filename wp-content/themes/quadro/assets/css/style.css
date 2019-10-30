@@ -817,6 +817,11 @@ ul#menu-menu-header li.menu-item-has-children ul.sub-menu {
   display: none;
 }
 
+
+.pagina-contenedora .woocommerce .woocommerce-notices-wrapper, .pagina-contenedora .woocommerce p.woocommerce-result-count, .pagina-contenedora .woocommerce form {
+  display: none;
+}
+
 @media screen and (min-width: 1920px){
   .container {
     border-left: solid 1px #000;
