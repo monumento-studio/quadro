@@ -818,8 +818,164 @@ ul#menu-menu-header li.menu-item-has-children ul.sub-menu {
 }
 
 
-.pagina-contenedora .woocommerce .woocommerce-notices-wrapper, .pagina-contenedora .woocommerce p.woocommerce-result-count, .pagina-contenedora .woocommerce form {
+.pagina-contenedora .woocommerce .woocommerce-notices-wrapper, .pagina-contenedora .woocommerce p.woocommerce-result-count {
   display: none;
+}
+
+section.container.filtros ul li input {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border: solid 1px black;
+}
+
+section.container.filtros ul li input[checked="checked"] {
+  background: black;
+}
+
+
+
+section.container.filtros {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form.woocommerce-ordering select.orderby {
+  border: 0px;
+  outline: none;
+  font-size: 1.25rem;
+  font-family: 'FoundersGrotesk-Regular';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  height: 36px;
+  background: white;
+  -webkit-border-radius: 0px;
+  width: 140px;
+  -webkit-appearance: none;
+  padding: 0;
+}
+
+form.woocommerce-ordering select.orderby option {
+  padding: 0;
+}
+
+section.container.filtros p.woocommerce-result-count {
+  display: none;
+}
+
+section.container.filtros h3.widget-title span {
+  font-size: 1.25rem;
+  font-family: 'FoundersGrotesk-Regular';
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+section.container.filtros h3.widget-title span span.t {
+  font-size: 8px;
+  margin-left: 5px;
+}
+
+form.woocommerce-ordering select.orderby option span {
+  font-size: 8px;
+}
+
+.pagina-contenedora .term-description {
+  display: none;
+}
+
+
+section.producto-info article.producto-specs .sticky {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section.producto-info article.producto-specs .sticky p.price {
+  margin-top: 20px;
+}
+
+section.producto-info article.producto-specs .sticky .woocommerce-product-details__short-description p {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+section.producto-info article.producto-specs .sticky h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: .85;
+}
+
+section.producto-info article.producto-specs .sticky form button {
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+section.producto-info article.producto-specs .sticky form button:hover {
+  color: black;
+  background: white;
+}
+
+section.producto-info article.producto-specs .sticky form input.qty {
+  border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+form.variations_form table.variations ul.variable-items-wrapper li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: solid 2px black;
+}
+
+form.variations_form table.variations ul.variable-items-wrapper li span {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+form.variations_form table.variations {
+  margin: 0 auto;
+}
+
+form.variations_form table.variations .label {
+  display: none;
+}
+
+form.variations_form table.variations ul.variable-items-wrapper li.selected span {
+  border: solid 2px black;
+  padding: 2px;
+}
+
+form.variations_form table.variations a.reset_variations {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form.variations_form .woocommerce-variation-price {
+  margin-bottom: 20px;
+}
+
+section.up-sells h2 {
+  display: none;
+}
+
+nav.woocommerce-breadcrumb a {
+  opacity: .25;
+}
+
+nav.woocommerce-breadcrumb a,  nav.woocommerce-breadcrumb{
+  font-family: 'FoundersGrotesk-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 1920px){

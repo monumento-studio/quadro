@@ -1,0 +1,82 @@
+2019-10-31T01:15:09+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/single-product/up-sells.php(47): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1973): wc_get_template('single-product/...', Array)
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(286): woocommerce_upsell_display('')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/plugin.php(46 in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T01:16:00+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/single-product/up-sells.php(31): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1973): wc_get_template('single-product/...', Array)
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(286): woocommerce_upsell_display('')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/plugin.php(46 in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T01:16:01+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/single-product/up-sells.php(31): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1973): wc_get_template('single-product/...', Array)
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(286): woocommerce_upsell_display('')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/plugin.php(46 in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T03:11:06+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_field() in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/header.php:16
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template.php(722): require_once()
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template.php(671): load_template('/Users/karencas...', true)
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/single-colecciones.php(3): get_header()
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include('/Users/karencas...')
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#6 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#7 {main}
+  thrown in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/header.php on line 16
+
+2019-10-31T03:49:27+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/archive-product.php(80): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/templates/taxonomy-product_cat.php(22): wc_get_template('archive-product...')
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include('/Users/karencas...')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#6 {main in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T04:01:41+00:00 CRITICAL syntax error, unexpected end of file in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/archive-product.php on line 79
+
+2019-10-31T04:02:11+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/archive-product.php(80): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/templates/taxonomy-product_cat.php(22): wc_get_template('archive-product...')
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include('/Users/karencas...')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#6 {main in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T04:08:05+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/content-product.php(80): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template.php(724): require('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(195): load_template('/Users/karencas...', false)
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/archive-product.php(27): wc_get_template_part('content', 'product')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/ in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T04:08:43+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on null in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php:930
+Stack trace:
+#0 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/archive-product.php(80): wc_get_price_including_tax(NULL)
+#1 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include('/Users/karencas...')
+#2 /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/templates/taxonomy-product_cat.php(22): wc_get_template('archive-product...')
+#3 /Users/karencastellanos/Local Sites/quadro/app/public/wp-includes/template-loader.php(78): include('/Users/karencas...')
+#4 /Users/karencastellanos/Local Sites/quadro/app/public/wp-blog-header.php(19): require_once('/Users/karencas...')
+#5 /Users/karencastellanos/Local Sites/quadro/app/public/index.php(17): require('/Users/karencas...')
+#6 {main in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/plugins/woocommerce/includes/wc-product-functions.php on line 930
+
+2019-10-31T04:17:42+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in /Users/karencastellanos/Local Sites/quadro/app/public/wp-content/themes/quadro/woocommerce/taxonomy-product_cat.php on line 13
+

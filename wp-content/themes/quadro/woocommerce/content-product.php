@@ -36,6 +36,6 @@ $imagen_2 = get_field('imagen_2');
 			<img class="intrinsic-item" srcset="<?php echo $imagen_1['url']; ?>" alt="<?php echo $imagen_2['alt']; ?>">
 		</picture>
 		<h3><?php the_title(); ?></h3>
-		<p>MXN <?php echo $product->get_price_html(); ?></p>
+		<p>MXN <?php echo wc_price( wc_get_price_including_tax( $product ) ); ?></p>
 	</a>
 </article>

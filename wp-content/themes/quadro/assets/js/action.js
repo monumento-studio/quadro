@@ -256,4 +256,9 @@ $('ul#menu-menu-header li.menu-item-has-children').on('mouseleave', function(){
 });
 
 
+
+
+// $('.woocommerce-ordering select').select2();
+
+
 });
